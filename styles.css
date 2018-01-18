@@ -1,0 +1,203 @@
+/* General reset:
+	 http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: 'Roboto', sans-serif;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	background-color: #EEEFEF;
+	line-height: 1;
+	display: flex;
+	flex-flow: column nowrap;
+}
+ol, ul {
+	list-style: none;
+	margin: 0;
+  padding: 0;
+}
+li{
+	display: block;
+}
+img{
+  display: block;
+  padding:0;
+  height:auto;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+hr{
+	display: block;
+	padding: 0;
+	height: 2em;
+	border: 0;
+}
+
+/* Font declarations */
+h1 {
+	font-size: 200%;
+	font-weight: 700;
+	line-height: 2em;
+}
+h2 {
+	font-size: 175%;
+}
+h3 {
+	font-size: 150%
+	font-weight: 700;
+}
+h4{
+	font-size: 150%;
+}
+
+a {
+	text-decoration: none;
+}
+a:visited {
+	color: #4F4F4F;
+}
+a:hover, a:active {
+	color: #A9A8A8;
+}
+
+/* container displays */
+.container {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+.rowContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 90%;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.columnContainer {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-around;
+	width: 50%;
+	padding: 2%;
+}
+.bannerContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 80%;
+	height: 20em;
+}
+.bannerContainer img{
+	height: auto;
+	width: 30%;
+}
+.textBox {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-around;
+	width: 50%;
+	height: 30em;
+
+}
+
+/* Nav Bar */
+ nav {
+	 display: flex;
+	 flex-flow: row wrap;
+	 justify-content: flex-end;
+	 align-items: center;
+	 height: 5em;
+	 background: #668294;
+	 margin-bottom: 2%;
+ 	 padding-right: 5%;
+ 	 border-bottom: 2px solid #2b4458;
+ }
+ .dropdownContent {
+	 display: none;
+ }
+
+ nav h4 {
+	 padding: 1%;
+ }
+
+
+/* slider */
+.slider {
+	display: flex;
+	height: 15em;
+	padding: 4%;
+	margin: 10%;
+	width: 75%;
+	overflow: hidden;
+}
+.slider img{
+	height: 10em;
+	width: auto;
+}
+.slider ul {
+
+}
+.slider li {
+	display: inline-block;
+	width: 80%;
+}
+
+/* images */
+.profilePic {
+	height: 18em;
+	width: auto;
+	border-radius: 50%;
+}
+.portFeature{
+	width: 100%;
+	height:auto;
+}
+.resumePic{
+	width: 100%;
+	height: auto;
+}
+
+/*animations & decorations */
+.lineBreak {
+  height: 5px;
+  width: 50%;
+  border: 2px solid #2b4458;
+  margin: 5em 0;
+}
