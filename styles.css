@@ -4,45 +4,25 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Noto Serif', serif;
 	font: inherit;
 	vertical-align: baseline;
+}
+
+* :after, :before{
+	-moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
-body {
-	background-color: #F7F8F8;
-	line-height: 1;
-	display: flex;
-	flex-flow: column nowrap;
-}
-header{
-	background-color: #797979;
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-	justify-content: center;
-	padding: 2%;
 }
 ol, ul {
 	list-style: none;
@@ -55,6 +35,7 @@ li{
 img{
   display: block;
   padding:0;
+	max-width: 100%;
   height:auto;
 }
 blockquote, q {
@@ -78,12 +59,12 @@ hr{
 
 /* Font declarations */
 h1 {
-	font-size: 200%;
+	font-size: 250%;
 	font-weight: 700;
-	line-height: 2em;
 }
 h2 {
 	font-size: 175%;
+	font-weight: 700;
 }
 h3 {
 	font-size: 150%
@@ -92,7 +73,6 @@ h3 {
 h4{
 	font-size: 150%;
 }
-
 a {
 	text-decoration: none;
 }
@@ -102,15 +82,69 @@ a:visited {
 a:hover, a:active {
 	color: #A9A8A8;
 }
+/* Body, Header & Footer */
+body {
+	background-color: #F7F8F8;
+}
+header{
+	display: flex;
+	flex-flow: row nowrap;
+	max-width: 100%;
+	height: 25em;
+	align-items: center;
+	justify-content: center;
+	padding: 2%;
+}
+#mainPgHeader{
+	background: #4C4C4C url('images/placeholder1.png') no-repeat center;
+	background-size: 100%;
+}
+header h1{
+	font-size:600%;
+	color:#EEEFEF;
+}
+footer {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 5em;
+	background-color: #4C4C4C;
+	border-top: 2px solid #2b4458;
+}
 
+footer h4{
+	color: #EEEFEF;
+	font-variant-caps: small-caps;
+}
+
+/* Nav Bar */
+ nav {
+	 display: flex;
+	 flex-flow: row wrap;
+	 justify-content: flex-end;
+	 align-items: center;
+	 height: 5em;
+	 background: #4C4C4C;
+ 	 padding-right: 5%;
+ }
+ .dropdownContent {
+	 display: none;
+ }
+ nav h4, a, a:hover, a:active, a:visited{
+	 padding: 1%;
+	 color: #EEEFEF;
+	 font-variant-caps: small-caps;
+ }
 /* container displays */
 .container {
 	display: flex;
 	flex-flow: column nowrap;
-	align-items: center;
-	justify-content: center;
 	width: 100%;
 	margin: 5% 0;
+	align-items: center;
+	justify-content: center;
+
 }
 .rowContainer {
 	display: flex;
@@ -130,8 +164,8 @@ a:hover, a:active {
 .bannerContainer {
 	display: flex;
 	flex-flow: row nowrap;
-	width: 80%;
-	height: 20em;
+	max-width: 80%;
+	height: auto;
 }
 .bannerContainer img{
 	height: auto;
@@ -143,50 +177,9 @@ a:hover, a:active {
 	align-items: center;
 	justify-content: space-around;
 	width: 50%;
-	height: 30em;
+	height: auto;
 
 }
-
-/* Nav Bar */
- nav {
-	 display: flex;
-	 flex-flow: row wrap;
-	 justify-content: flex-end;
-	 align-items: center;
-	 height: 5em;
-	 background: #4C4C4C;
-	 margin-bottom: 2%;
- 	 padding-right: 5%;
- 	 border-bottom: 2px solid #2b4458;
- }
- .dropdownContent {
-	 display: none;
- }
-
- nav h4, a, a:hover, a:active, a:visited{
-	 padding: 1%;
-	 color: #EEEFEF;
-	 font-variant-caps: small-caps;
- }
-
- /* Footer */
- footer {
-	 display: flex;
-	 flex-flow: row nowrap;
-	 justify-content: space-around;
-	 align-items: center;
-	 height: 5em;
-	 background-color: #4C4C4C;
-	 border-top: 2px solid #2b4458;
- }
- footer li{
-	 display: inline-block;
- }
-
- footer h4{
-	 color: #EEEFEF;
-	 font-variant-caps: small-caps;
- }
 
 
 /* slider */
@@ -195,10 +188,10 @@ a:hover, a:active {
  	align-items: stretch;
  	width: 90%;
 	height:30em;
- 	margin: 15% 0;
+ 	/*margin: 15% 0; */
 }
 .sliderButton{
-  width: 30px;
+  width: 1.25em;
   border: none;
   background: transparent;
   color: #4C4C4C;
@@ -212,35 +205,35 @@ a:hover, a:active {
 	opacity: 1;
 }
 .slider {
-	flex: 1;
-	overflow: hidden;
+  width: 100%;
+  overflow: hidden;
+  height: 30em;
+  position: relative;
 }
-.slider img{
-	object-fit: fill;
-	min-height: 100%;
-	min-width: 100%;
+.slider li img{
+  border: none;
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
 }
 .slider ul {
-	list-style-type: none;
-  white-space: nowrap;
-  font-size: 0;
-  line-height: 0;
-  transition: transform 1s ease-in-out;
-
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  width: 900%;
+  height: 100%;
+  top: 0;
 }
 .slider li {
-	padding: 30px 20px;
-  display: inline-block;
-  width: 100%;
-  height: 30em;
-  font-size: 25px;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  font-weight: bold;
-  background-size: cover;
-  background-position: 50% 50%;
-  text-transform: uppercase;
-  /*box-shadow: inset 0 0 10px rgba(0,0,0,0.5);*/
+  padding: 0;
+  margin: 0;
+  width: 11.11111111%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 
   &:nth-child(2) {
     color: #fff;
@@ -249,8 +242,8 @@ a:hover, a:active {
 
 /* images */
 .profilePic {
-	height: 18em;
-	width: auto;
+	height: auto;
+	width: 100%;
 	border-radius: 50%;
 }
 .portFeature{
@@ -269,3 +262,19 @@ a:hover, a:active {
   border: 2px solid #2b4458;
   margin: 5em 0;
 }
+
+/**********************
+	Media Queries
+	*********************/
+
+	@media screen and (max-width: 768px){
+		.rowContainer{
+			flex-flow: row wrap;
+		}
+		.textBox{
+			width:90%;
+		}
+		header h1{
+			font-size: 400%;
+		}
+	}
