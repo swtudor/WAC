@@ -133,14 +133,25 @@ footer h4{
 	 background: #4C4C4C;
  	 padding-right: 5%;
  }
- .dropdownContent {
-	 display: none;
- }
  nav h4, a, a:hover, a:active, a:visited{
 	 padding: 1%;
 	 color: #EEEFEF;
 	 font-variant-caps: small-caps;
  }
+
+/* Dropdown */
+.dropdown {
+	 position: relative;
+	 display: inline-block;
+}
+.dropdownContent{
+	display: none;
+  position: absolute;
+	z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 /* container displays */
 .container {
 	display: flex;
