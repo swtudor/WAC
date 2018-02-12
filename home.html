@@ -13,7 +13,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-          <img src="images/FoxFavicon.png" width="30" height="30" class="d-inline-block align-top" alt=""/>
+          <img src="images/FoxFaviconTrans.png" width="30" height="30" class="d-inline-block align-top" alt=""/>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -29,21 +29,22 @@
             Artist Profiles
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="artist-page.html">Artist One Name</a>
-                <a class="dropdown-item" href="artist-page.html">Artist Two Name</a>
-                <a class="dropdown-item" href="artist-page.html">Artist Three Name</a>
+                <a class="dropdown-item" href="artist-profile.html">Artist One Name</a>
+                <a class="dropdown-item" href="artist-profile.html">Artist Two Name</a>
+                <a class="dropdown-item" href="artist-profile.html">Artist Three Name</a>
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="gallery.html" id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
                 Gallery
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="gallery.html">All Artists</a>
+                <a class="dropdown-item" href="maingallery.html">All Artists</a>
                 <div class="dropdown-divider"></div>
                 <h6 class="dropdown-header">By Artist Name</h6>
-                <a class="dropdown-item" href="artist-page.html">By Name 1</a>
-                <a class="dropdown-item" href="artist-page.html">By Name 2</a>
+                <a class="dropdown-item" href="individualGallery.html">John Smith</a>
+                <a class="dropdown-item" href="individualGallery.html">Jane Smith</a>
+                <a class="dropdown-item" href="individualGallery.html">Joe Blow</a>
               </div>
             </li>
             <li class="nav-item">
@@ -65,9 +66,9 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
           </ol>
-          <div class="carousel-inner w-100" style="height:500px;">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="images/placeholder1.png" alt="First slide">
+          <div class="carousel-inner" style="height:500px;">
+            <div class="carousel-item bg-dark active">
+              <img class="d-block mx-auto mw-100" src="images/placeholder-logo.png" alt="First slide">
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="images/placeholder2.png" alt="Second slide">
@@ -76,13 +77,13 @@
               <img class="d-block w-100" src="images/placeholder3.png" alt="Third slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100 img-fluid" src="images/placeholder4.png" alt="Fourth slide">
+              <img class="d-block w-100" src="images/placeholder1.png" alt="Fourth slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100 mh-100" src="images/placeholder5.png" alt="Fifth slide">
+              <img class="d-block w-100" src="images/placeholder7.png" alt="Fifth slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="images/placeholder6.png" alt="Sixth slide">
+              <img class="d-block w-100" src="images/placeholder9.png" alt="Sixth slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -95,10 +96,16 @@
           </a>
         </div>
         <!--Jumbotron-->
-      <div class="jumbotron text-center bg-light">
-        <h1 class="jumbotron-heading">Wyllie Arts Collective</h1>
-        <p class="lead text-muted">An artist's collective run by artists for artists.</p>
-        <p class='text-muted'>View galleries, read the biographies or purchase artwork. Or any other simple welcome message to put here. No more than three or four sentences.</p>
+        <!--Jumbotron-->
+      <div class="jumbotron jumbotron-fluid bg-light">
+        <div class='container text-center'>
+          <h1 class="display-2">Wyllie Arts Collective</h1>
+          <p class="lead text-muted">An artist's collective run by artists for artists.</p>
+          <p class='text-muted'>View galleries, read the biographies or purchase artwork. Or any other simple welcome message to put here. No more than three or four sentences.</p>
+          <p class="lead">
+            <a class="btn btn-secondary btn-lg" href="maingallery.html" role="button">View Collective Gallery</a>
+          </p>
+        </div>
       </div>
       <!--Artist Cards-->
       <div class='album py-5 bg-light'>
@@ -111,8 +118,8 @@
                 <div class='card-body'>
                   <h5 class='card-title'>Artist Name</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Main Medium</h6>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Bio</a>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Gallery</a>
+                  <a href="artist-profile.html" class="btn btn-secondary btn-sm">Artist's Bio</a>
+                  <a href="individualGallery.html" class="btn btn-secondary btn-sm">Artist's Gallery</a>
                 </div>
               </div>
             </div>
@@ -124,8 +131,8 @@
                 <div class='card-body'>
                   <h5 class='card-title'>Artist Name</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Main Medium</h6>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Bio</a>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Gallery</a>
+                  <a href="artist-profile.html" class="btn btn-secondary btn-sm">Artist's Bio</a>
+                  <a href="individualGallery.html" class="btn btn-secondary btn-sm">Artist's Gallery</a>
                 </div>
               </div>
             </div>
@@ -136,8 +143,8 @@
                 <div class='card-body'>
                   <h5 class='card-title'>Artist Name</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Main Medium</h6>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Bio</a>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Gallery</a>
+                  <a href="artist-profile.html" class="btn btn-secondary btn-sm">Artist's Bio</a>
+                  <a href="individualGallery.html" class="btn btn-secondary btn-sm">Artist's Gallery</a>
                 </div>
               </div>
             </div>
@@ -148,8 +155,8 @@
                 <div class='card-body'>
                   <h5 class='card-title'>Artist Name</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Main Medium</h6>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Bio</a>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Gallery</a>
+                  <a href="artist-profile.html" class="btn btn-secondary btn-sm">Artist's Bio</a>
+                  <a href="individualGallery.html" class="btn btn-secondary btn-sm">Artist's Gallery</a>
                 </div>
               </div>
             </div>
@@ -160,8 +167,8 @@
                 <div class='card-body'>
                   <h5 class='card-title'>Artist Name</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Main Medium</h6>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Bio</a>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Gallery</a>
+                  <a href="artist-profile.html" class="btn btn-secondary btn-sm">Artist's Bio</a>
+                  <a href="individualGallery.html" class="btn btn-secondary btn-sm">Artist's Gallery</a>
                 </div>
               </div>
             </div>
@@ -172,8 +179,8 @@
                 <div class='card-body'>
                   <h5 class='card-title'>Artist Name</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Main Medium</h6>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Bio</a>
-                  <a href="#" class="btn btn-secondary btn-sm">Artist's Gallery</a>
+                  <a href="artist-profile.html" class="btn btn-secondary btn-sm">Artist's Bio</a>
+                  <a href="individualGallery.html" class="btn btn-secondary btn-sm">Artist's Gallery</a>
                 </div>
               </div>
             </div>
@@ -181,12 +188,15 @@
           </div>
         </div>
       </div>
-      <div class= 'container'>
-
-      </div>
+      <footer class='footer'>
+        <div class='text-center bg-dark'>
+          <img src="images/foxFaviconTrans.png" width="30" height="30" class="d-inline-block align-top m-2" alt=""/>
+          <h4 class='text-light'>Wyllie Arts Collective</h4>
+          <h4 class='text-light'>St. Louis, MO</h4>
+          <br>
+        </div>
+      </footer>
     </main>
-
-
 
 
     <!-- Optional JavaScript -->
